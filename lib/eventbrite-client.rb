@@ -2,6 +2,7 @@ require 'httparty'
 class EventbriteClient
   include HTTParty
   base_uri 'https://www.eventbrite.com'
+  default_timeout 120
 
   def initialize( auth_tokens )
     @auth = {}
